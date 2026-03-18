@@ -1,0 +1,97 @@
+# Environments
+.env*
+.venv
+env/
+venv/
+ENV/
+.Python
+.python-version
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+.pytest_cache/
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Caches
+.cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+cython_debug/
+.ipynb_checkpoints/
+.dmypy.json
+dmypy.json
+**/__pycache__/*
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.local-browsers
+
+# Project Specific
+run_logs/
+!run_logs/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cloud / Credentials
+credentials.json
+client_secret*.json
+service-account*.json
+.gcloud/
+.aws/
+.ssh/
+auth-token*
+.auth/
+
+# Dashboard Generated Data
+dashboard/report_*.html
+dashboard/runs_data.json
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Web / Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/

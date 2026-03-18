@@ -1,0 +1,1104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Testing Platform - Run Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="icon">🚀</span>
+                <h1>Pixel<span>Mind</span></h1>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="label">Total Test Extractions</span>
+                    <span class="value">79</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="execution-control">
+            <div class="control-card">
+                <h2>Launch Autonomous Agent</h2>
+                <div class="input-group">
+                    <input type="text" id="test-url" placeholder="Enter Target URL (e.g. https://www.mrgnyc.com/)">
+                    <input type="text" id="test-goal" placeholder="Define Test Goal (e.g. Verify availability)">
+                    <button id="run-btn" onclick="startTest()">Run AI Agent</button>
+                </div>
+                <div id="live-status" class="live-status hidden">
+                    <div class="pulse-icon"></div>
+                    <span id="status-text">Initialising...</span>
+                    <div class="progress-bar"><div id="progress-fill"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section class="explorer-card">
+                <div class="table-container">
+                    <table class="run-table" id="runs-table">
+                        <thead>
+                            <tr class="header-row">
+                                <th>Prompt execution</th>
+                                <th>Run ID</th>
+                                <th>Status</th>
+                                <th>Steps</th>
+                                <th>Start Time</th>
+                                <th>Duration</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr class="filter-row">
+                                <td><input type="text" id="filter-name" placeholder="Filter Name..." onkeyup="filterTable()"></td>
+                                <td><input type="text" id="filter-id" placeholder="Filter ID..." onkeyup="filterTable()"></td>
+                                <td><input type="text" id="filter-status" placeholder="Filter Status..." onkeyup="filterTable()"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>
+                <span class="run-name">Verify that a file can be uploaded successfully on</span>
+                <span class="run-url">https://practice.expandtesting.com/upload</span>
+            </td>
+            <td>20260317170600</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>1</td>
+            <td>Mar 17, 17:06</td>
+            <td class="run-duration">1m 11s</td>
+            <td><a href="report_20260317_170600_Verify_that_a_file_can_be_uploaded_successfully_on.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that only one radio button can be selected </span>
+                <span class="run-url">https://practice.expandtesting.com/radio-buttons</span>
+            </td>
+            <td>20260317170342</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 17:03</td>
+            <td class="run-duration">2m 18s</td>
+            <td><a href="report_20260317_170342_Verify_that_only_one_radio_button_can_be_selected_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that checkbox states change correctly when </span>
+                <span class="run-url">https://practice.expandtesting.com/checkboxes</span>
+            </td>
+            <td>20260317170143</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>6</td>
+            <td>Mar 17, 17:01</td>
+            <td class="run-duration">1m 59s</td>
+            <td><a href="report_20260317_170143_Verify_that_checkbox_states_change_correctly_when_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317165727</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:57</td>
+            <td class="run-duration">4m 16s</td>
+            <td><a href="report_20260317_165727_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that category filtering displays the expect</span>
+                <span class="run-url">https://automationexercise.com/category_products/2</span>
+            </td>
+            <td>20260317165524</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 16:55</td>
+            <td class="run-duration">2m 3s</td>
+            <td><a href="report_20260317_165524_Verify_that_category_filtering_displays_the_expect.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the contact us form can be filled and </span>
+                <span class="run-url">https://automationexercise.com/contact_us</span>
+            </td>
+            <td>20260317165303</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>7</td>
+            <td>Mar 17, 16:53</td>
+            <td class="run-duration">2m 21s</td>
+            <td><a href="report_20260317_165303_Verify_that_the_contact_us_form_can_be_filled_and_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the cart page loads correctly for a gu</span>
+                <span class="run-url">https://automationexercise.com/view_cart</span>
+            </td>
+            <td>20260317164913</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 16:49</td>
+            <td class="run-duration">3m 50s</td>
+            <td><a href="report_20260317_164913_Verify_that_the_cart_page_loads_correctly_for_a_gu.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the product details page displays prod</span>
+                <span class="run-url">https://automationexercise.com/product_details/1</span>
+            </td>
+            <td>20260317164754</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>10</td>
+            <td>Mar 17, 16:47</td>
+            <td class="run-duration">1m 19s</td>
+            <td><a href="report_20260317_164754_Verify_that_the_product_details_page_displays_prod.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317164627</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 16:46</td>
+            <td class="run-duration">1m 5s</td>
+            <td><a href="report_20260317_164627_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that product search returns relevant matchi</span>
+                <span class="run-url">https://automationexercise.com/products</span>
+            </td>
+            <td>20260317164608</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>7</td>
+            <td>Mar 17, 16:46</td>
+            <td class="run-duration">1m 46s</td>
+            <td><a href="report_20260317_164608_Verify_that_product_search_returns_relevant_matchi.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317164452</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:44</td>
+            <td class="run-duration">1m 35s</td>
+            <td><a href="report_20260317_164452_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317164215</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 16:42</td>
+            <td class="run-duration">3m 53s</td>
+            <td><a href="report_20260317_164215_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that dynamically loaded content appears aft</span>
+                <span class="run-url">https://the-internet.herokuapp.com/dynamic_loading/1</span>
+            </td>
+            <td>20260317164103</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:41</td>
+            <td class="run-duration">1m 12s</td>
+            <td><a href="report_20260317_164103_Verify_that_dynamically_loaded_content_appears_aft.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can upload a file successfully </span>
+                <span class="run-url">https://the-internet.herokuapp.com/upload</span>
+            </td>
+            <td>20260317163952</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:39</td>
+            <td class="run-duration">1m 11s</td>
+            <td><a href="report_20260317_163952_Verify_that_a_user_can_upload_a_file_successfully_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that JavaScript alert  confirm  and prompt </span>
+                <span class="run-url">https://the-internet.herokuapp.com/javascript_alerts</span>
+            </td>
+            <td>20260317163640</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>11</td>
+            <td>Mar 17, 16:36</td>
+            <td class="run-duration">3m 12s</td>
+            <td><a href="report_20260317_163640_Verify_that_JavaScript_alert__confirm__and_prompt_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that both checkboxes can be checked and unc</span>
+                <span class="run-url">https://the-internet.herokuapp.com/checkboxes</span>
+            </td>
+            <td>20260317163441</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>6</td>
+            <td>Mar 17, 16:34</td>
+            <td class="run-duration">1m 59s</td>
+            <td><a href="report_20260317_163441_Verify_that_both_checkboxes_can_be_checked_and_unc.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select Option 1 and Option </span>
+                <span class="run-url">https://the-internet.herokuapp.com/dropdown</span>
+            </td>
+            <td>20260317163404</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>1</td>
+            <td>Mar 17, 16:34</td>
+            <td class="run-duration">37s</td>
+            <td><a href="report_20260317_163404_Verify_that_a_user_can_select_Option_1_and_Option_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Find a bike kids helmet and add it to the cart</span>
+                <span class="run-url">https://www.google.com/shopping</span>
+            </td>
+            <td>20260317163155</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>6</td>
+            <td>Mar 17, 16:31</td>
+            <td class="run-duration">2m 9s</td>
+            <td><a href="report_20260317_163155_Find_a_bike_kids_helmet_and_add_it_to_the_cart.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317163049</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 16:30</td>
+            <td class="run-duration">1m 6s</td>
+            <td><a href="report_20260317_163049_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317162821</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:28</td>
+            <td class="run-duration">1m 41s</td>
+            <td><a href="report_20260317_162821_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/?page=browser&status=2,21</span>
+            </td>
+            <td>20260317162725</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 16:27</td>
+            <td class="run-duration">3m 24s</td>
+            <td><a href="report_20260317_162725_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317162708</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>3</td>
+            <td>Mar 17, 16:27</td>
+            <td class="run-duration">1m 16s</td>
+            <td><a href="report_20260317_162708_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317162641</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:26</td>
+            <td class="run-duration">1m 40s</td>
+            <td><a href="report_20260317_162641_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317162421</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 16:24</td>
+            <td class="run-duration">2m 47s</td>
+            <td><a href="report_20260317_162421_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317161700</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:17</td>
+            <td class="run-duration">4m 51s</td>
+            <td><a href="report_20260317_161700_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317161625</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 16:16</td>
+            <td class="run-duration">35s</td>
+            <td><a href="report_20260317_161625_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317160343</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 16:03</td>
+            <td class="run-duration">27s</td>
+            <td><a href="report_20260317_160343_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317160205</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 16:02</td>
+            <td class="run-duration">1m 38s</td>
+            <td><a href="report_20260317_160205_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a file can be uploaded successfully on</span>
+                <span class="run-url">https://practice.expandtesting.com/upload</span>
+            </td>
+            <td>20260317152055</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 15:20</td>
+            <td class="run-duration">43s</td>
+            <td><a href="report_20260317_152055_Verify_that_a_file_can_be_uploaded_successfully_on.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that only one radio button can be selected </span>
+                <span class="run-url">https://practice.expandtesting.com/radio-buttons</span>
+            </td>
+            <td>20260317151833</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 15:18</td>
+            <td class="run-duration">2m 22s</td>
+            <td><a href="report_20260317_151833_Verify_that_only_one_radio_button_can_be_selected_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that checkbox states change correctly when </span>
+                <span class="run-url">https://practice.expandtesting.com/checkboxes</span>
+            </td>
+            <td>20260317151632</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>6</td>
+            <td>Mar 17, 15:16</td>
+            <td class="run-duration">2m 1s</td>
+            <td><a href="report_20260317_151632_Verify_that_checkbox_states_change_correctly_when_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317151525</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 15:15</td>
+            <td class="run-duration">1m 7s</td>
+            <td><a href="report_20260317_151525_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that category filtering displays the expect</span>
+                <span class="run-url">https://automationexercise.com/category_products/2</span>
+            </td>
+            <td>20260317151334</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 15:13</td>
+            <td class="run-duration">1m 51s</td>
+            <td><a href="report_20260317_151334_Verify_that_category_filtering_displays_the_expect.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the contact us form can be filled and </span>
+                <span class="run-url">https://automationexercise.com/contact_us</span>
+            </td>
+            <td>20260317151006</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>8</td>
+            <td>Mar 17, 15:10</td>
+            <td class="run-duration">3m 28s</td>
+            <td><a href="report_20260317_151006_Verify_that_the_contact_us_form_can_be_filled_and_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317150946</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 15:09</td>
+            <td class="run-duration">2m 10s</td>
+            <td><a href="report_20260317_150946_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that JavaScript alert  confirm  and prompt </span>
+                <span class="run-url">https://the-internet.herokuapp.com/javascript_alerts</span>
+            </td>
+            <td>20260317150854</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>11</td>
+            <td>Mar 17, 15:08</td>
+            <td class="run-duration">52s</td>
+            <td><a href="report_20260317_150854_Verify_that_JavaScript_alert__confirm__and_prompt_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the cart page loads correctly for a gu</span>
+                <span class="run-url">https://automationexercise.com/view_cart</span>
+            </td>
+            <td>20260317150811</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>6</td>
+            <td>Mar 17, 15:08</td>
+            <td class="run-duration">1m 55s</td>
+            <td><a href="report_20260317_150811_Verify_that_the_cart_page_loads_correctly_for_a_gu.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select an option from the d</span>
+                <span class="run-url">https://practice.expandtesting.com/dropdown</span>
+            </td>
+            <td>20260317150609</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 15:06</td>
+            <td class="run-duration">2m 32s</td>
+            <td><a href="report_20260317_150609_Verify_that_a_user_can_select_an_option_from_the_d.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the product details page displays prod</span>
+                <span class="run-url">https://automationexercise.com/product_details/1</span>
+            </td>
+            <td>20260317150603</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>9</td>
+            <td>Mar 17, 15:06</td>
+            <td class="run-duration">2m 8s</td>
+            <td><a href="report_20260317_150603_Verify_that_the_product_details_page_displays_prod.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that product search returns relevant matchi</span>
+                <span class="run-url">https://automationexercise.com/products</span>
+            </td>
+            <td>20260317150456</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>6</td>
+            <td>Mar 17, 15:04</td>
+            <td class="run-duration">1m 7s</td>
+            <td><a href="report_20260317_150456_Verify_that_product_search_returns_relevant_matchi.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select Option 1 and Option </span>
+                <span class="run-url">https://the-internet.herokuapp.com/dropdown</span>
+            </td>
+            <td>20260317150441</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 15:04</td>
+            <td class="run-duration">57s</td>
+            <td><a href="report_20260317_150441_Verify_that_a_user_can_select_Option_1_and_Option_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that the homepage loads successfully and ma</span>
+                <span class="run-url">https://automationexercise.com/</span>
+            </td>
+            <td>20260317150341</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 15:03</td>
+            <td class="run-duration">1m 15s</td>
+            <td><a href="report_20260317_150341_Verify_that_the_homepage_loads_successfully_and_ma.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that dynamically loaded content appears aft</span>
+                <span class="run-url">https://the-internet.herokuapp.com/dynamic_loading/1</span>
+            </td>
+            <td>20260317150252</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 15:02</td>
+            <td class="run-duration">49s</td>
+            <td><a href="report_20260317_150252_Verify_that_dynamically_loaded_content_appears_aft.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can upload a file successfully </span>
+                <span class="run-url">https://the-internet.herokuapp.com/upload</span>
+            </td>
+            <td>20260317150200</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 15:02</td>
+            <td class="run-duration">52s</td>
+            <td><a href="report_20260317_150200_Verify_that_a_user_can_upload_a_file_successfully_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select Option 1 and Option </span>
+                <span class="run-url">https://the-internet.herokuapp.com/dropdown</span>
+            </td>
+            <td>20260317150146</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>6</td>
+            <td>Mar 17, 15:01</td>
+            <td class="run-duration">48s</td>
+            <td><a href="report_20260317_150146_Verify_that_a_user_can_select_Option_1_and_Option_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that JavaScript alert  confirm  and prompt </span>
+                <span class="run-url">https://the-internet.herokuapp.com/javascript_alerts</span>
+            </td>
+            <td>20260317150121</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 15:01</td>
+            <td class="run-duration">39s</td>
+            <td><a href="report_20260317_150121_Verify_that_JavaScript_alert__confirm__and_prompt_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that both checkboxes can be checked and unc</span>
+                <span class="run-url">https://the-internet.herokuapp.com/checkboxes</span>
+            </td>
+            <td>20260317145807</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>7</td>
+            <td>Mar 17, 14:58</td>
+            <td class="run-duration">3m 14s</td>
+            <td><a href="report_20260317_145807_Verify_that_both_checkboxes_can_be_checked_and_unc.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify that a user can select Option 1 and Option </span>
+                <span class="run-url">https://the-internet.herokuapp.com/dropdown</span>
+            </td>
+            <td>20260317145724</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 14:57</td>
+            <td class="run-duration">43s</td>
+            <td><a href="report_20260317_145724_Verify_that_a_user_can_select_Option_1_and_Option_.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Find a bike kids helmet and add it to the cart</span>
+                <span class="run-url">https://www.google.com/shopping</span>
+            </td>
+            <td>20260317145515</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>6</td>
+            <td>Mar 17, 14:55</td>
+            <td class="run-duration">2m 9s</td>
+            <td><a href="report_20260317_145515_Find_a_bike_kids_helmet_and_add_it_to_the_cart.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317145210</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 14:52</td>
+            <td class="run-duration">3m 5s</td>
+            <td><a href="report_20260317_145210_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/?page=browser&status=2,21</span>
+            </td>
+            <td>20260317144952</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 14:49</td>
+            <td class="run-duration">2m 18s</td>
+            <td><a href="report_20260317_144952_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317141902</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 14:19</td>
+            <td class="run-duration">1m 38s</td>
+            <td><a href="report_20260317_141902_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/?page=browser&status=2,21</span>
+            </td>
+            <td>20260317141825</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 14:18</td>
+            <td class="run-duration">37s</td>
+            <td><a href="report_20260317_141825_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Find a bike kids helmet and add it to the cart</span>
+                <span class="run-url">https://www.google.com/shopping</span>
+            </td>
+            <td>20260317135205</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>7</td>
+            <td>Mar 17, 13:52</td>
+            <td class="run-duration">1m 44s</td>
+            <td><a href="report_20260317_135205_Find_a_bike_kids_helmet_and_add_it_to_the_cart.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Find a bike kids helmet and add it to the cart</span>
+                <span class="run-url">https://www.google.com/shopping</span>
+            </td>
+            <td>20260317135204</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>7</td>
+            <td>Mar 17, 13:52</td>
+            <td class="run-duration">1m 23s</td>
+            <td><a href="report_20260317_135204_Find_a_bike_kids_helmet_and_add_it_to_the_cart.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317133109</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:31</td>
+            <td class="run-duration">3m 30s</td>
+            <td><a href="report_20260317_133109_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/?page=browser&status=2,21</span>
+            </td>
+            <td>20260317132830</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:28</td>
+            <td class="run-duration">2m 39s</td>
+            <td><a href="report_20260317_132830_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317132158</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:21</td>
+            <td class="run-duration">53s</td>
+            <td><a href="report_20260317_132158_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317132125</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:21</td>
+            <td class="run-duration">7m 57s</td>
+            <td><a href="report_20260317_132125_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/?page=browser&status=2,21</span>
+            </td>
+            <td>20260317132000</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:20</td>
+            <td class="run-duration">1m 58s</td>
+            <td><a href="report_20260317_132000_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/?page=browser&status=2,21</span>
+            </td>
+            <td>20260317131757</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 13:17</td>
+            <td class="run-duration">2m 34s</td>
+            <td><a href="report_20260317_131757_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/properties/rentals</span>
+            </td>
+            <td>20260317131230</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:12</td>
+            <td class="run-duration">39s</td>
+            <td><a href="report_20260317_131230_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317130114</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 13:01</td>
+            <td class="run-duration">1m 35s</td>
+            <td><a href="report_20260317_130114_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317125747</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 12:57</td>
+            <td class="run-duration">36s</td>
+            <td><a href="report_20260317_125747_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317125134</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>6</td>
+            <td>Mar 17, 12:51</td>
+            <td class="run-duration">2m 20s</td>
+            <td><a href="report_20260317_125134_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com</span>
+            </td>
+            <td>20260317124705</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 12:47</td>
+            <td class="run-duration">41s</td>
+            <td><a href="report_20260317_124705_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com</span>
+            </td>
+            <td>20260317124305</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 12:43</td>
+            <td class="run-duration">1m 44s</td>
+            <td><a href="report_20260317_124305_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com</span>
+            </td>
+            <td>20260317121915</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 12:19</td>
+            <td class="run-duration">1m 35s</td>
+            <td><a href="report_20260317_121915_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317121216</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>4</td>
+            <td>Mar 17, 12:12</td>
+            <td class="run-duration">2m 2s</td>
+            <td><a href="report_20260317_121216_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317120848</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 12:08</td>
+            <td class="run-duration">2m 58s</td>
+            <td><a href="report_20260317_120848_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317120508</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 12:05</td>
+            <td class="run-duration">1m 47s</td>
+            <td><a href="report_20260317_120508_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317115606</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>4</td>
+            <td>Mar 17, 11:56</td>
+            <td class="run-duration">1m 33s</td>
+            <td><a href="report_20260317_115606_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.udr.com/new-york-city-apartments/murray-hill/view-34/</span>
+            </td>
+            <td>20260317113742</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>6</td>
+            <td>Mar 17, 11:37</td>
+            <td class="run-duration">3m 41s</td>
+            <td><a href="report_20260317_113742_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.kipsbaycourt.com/</span>
+            </td>
+            <td>20260317113103</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 11:31</td>
+            <td class="run-duration">2m 48s</td>
+            <td><a href="report_20260317_113103_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.kipsbaycourt.com/</span>
+            </td>
+            <td>20260317112950</td>
+            <td><span class="status-pill success">SUCCESS</span></td>
+            <td>1</td>
+            <td>Mar 17, 11:29</td>
+            <td class="run-duration">33s</td>
+            <td><a href="report_20260317_112950_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317112257</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 11:22</td>
+            <td class="run-duration">5m 35s</td>
+            <td><a href="report_20260317_112257_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317112049</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 11:20</td>
+            <td class="run-duration">1m 37s</td>
+            <td><a href="report_20260317_112049_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317111215</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 11:12</td>
+            <td class="run-duration">1m 16s</td>
+            <td><a href="report_20260317_111215_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="run-name">Verify the availability of 1 bedroom apartments</span>
+                <span class="run-url">https://www.mrgnyc.com/</span>
+            </td>
+            <td>20260317110852</td>
+            <td><span class="status-pill fail">FAIL</span></td>
+            <td>5</td>
+            <td>Mar 17, 11:08</td>
+            <td class="run-duration">1m 1s</td>
+            <td><a href="report_20260317_110852_Verify_the_availability_of_1_bedroom_apartments.html" class="view-btn">View Report</a></td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pixelmind"
+version = "0.1.0"
+description = "Autonomous AI-Driven Web Testing Framework"
+authors = ["Developer <developer@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+playwright = ">=1.42.0"
+google-genai = "*"
+scikit-image = ">=0.22.0"
+numpy = ">=1.26.0"
+# sentence-transformers = "*"
+# opencv-python = "*"
+pytest = ">=8.0.0"
+python-dotenv = ">=1.0.1"
+fastapi = "^0.135.1"
+uvicorn = "^0.42.0"
+rich = "^14.3.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0.0"
+pytest-asyncio = ">=0.23.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "e2e: marks tests as end-to-end scenarios (run on real websites)",
+]
