@@ -2,7 +2,7 @@
 name = "pixelmind"
 version = "0.1.0"
 description = "Autonomous AI-Driven Web Testing Framework"
-authors = ["Developer <developer@example.com>"]
+authors = ["Michael Bettan"]
 readme = "README.md"
 packages = [{include = "src"}]
 
