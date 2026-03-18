@@ -71,80 +71,80 @@ class TestFrameworkE2E:
 
     # --- Batch 1: Heroku 'The Internet' ---
 
-    async def test_heroku_dropdown(self):
+    async def test_dropdown_simple(self):
         test_goal = "Verify that a user can select Option 1 from the dropdown successfully"
         run_id = await run_test(test_goal, "https://the-internet.herokuapp.com/dropdown")
         await self._verify_run(run_id)
 
-    async def test_heroku_checkboxes(self):
+    async def test_checkboxes_simple(self):
         test_goal = "Verify that both checkboxes can be checked and unchecked correctly"
         run_id = await run_test(test_goal, "https://the-internet.herokuapp.com/checkboxes")
         await self._verify_run(run_id)
 
     
 
-    async def test_heroku_upload(self):
+    async def test_file_upload_simple(self):
         test_goal = "Verify that a user can upload a file successfully and see the uploaded filename"
         # Note: This might require the agent to find an 'upload' button and potentially use a local dummy file.
         # The agent should autonomously handle the file picker if possible, or we might need to provide a mock.
         run_id = await run_test(test_goal, "https://the-internet.herokuapp.com/upload")
         await self._verify_run(run_id)
 
-    async def test_heroku_dynamic_loading(self):
+    async def test_dynamic_loading(self):
         test_goal = "Verify that dynamically loaded content appears after clicking the Start button"
         run_id = await run_test(test_goal, "https://the-internet.herokuapp.com/dynamic_loading/1")
         await self._verify_run(run_id)
 
     # --- Batch 2: Automation Exercise ---
 
-    async def test_ae_homepage(self):
+    async def test_ecommerce_homepage(self):
         test_goal = "Verify that the homepage loads successfully and main navigation links are visible"
         run_id = await run_test(test_goal, "https://automationexercise.com/")
         await self._verify_run(run_id)
 
-    async def test_ae_search(self):
+    async def test_ecommerce_search(self):
         test_goal = "Verify that product search returns relevant matching products"
         run_id = await run_test(test_goal, "https://automationexercise.com/products")
         await self._verify_run(run_id)
 
-    async def test_ae_product_details(self):
+    async def test_ecommerce_product_details(self):
         test_goal = "Verify that the product details page displays product information correctly"
         run_id = await run_test(test_goal, "https://automationexercise.com/product_details/1")
         await self._verify_run(run_id)
 
-    async def test_ae_cart(self):
+    async def test_ecommerce_cart(self):
         test_goal = "Verify that the cart page loads correctly for a guest user"
         run_id = await run_test(test_goal, "https://automationexercise.com/view_cart")
         await self._verify_run(run_id)
 
-    async def test_ae_contact_us(self):
+    async def test_ecommerce_contact_us(self):
         test_goal = "Verify that the contact us form can be filled and submitted successfully"
         run_id = await run_test(test_goal, "https://automationexercise.com/contact_us")
         await self._verify_run(run_id)
 
-    async def test_ae_category(self):
+    async def test_ecommerce_category(self):
         test_goal = "Verify that category filtering displays the expected category products"
         run_id = await run_test(test_goal, "https://automationexercise.com/category_products/2")
         await self._verify_run(run_id)
 
     # --- Batch 3: Expand Testing ---
 
-    async def test_et_dropdown(self):
+    async def test_practice_dropdown(self):
         test_goal = "Verify that a user can select an option from the dropdown list"
         run_id = await run_test(test_goal, "https://practice.expandtesting.com/dropdown")
         await self._verify_run(run_id)
 
-    async def test_et_checkboxes(self):
+    async def test_practice_checkboxes(self):
         test_goal = "Verify that checkbox states change correctly when clicked"
         run_id = await run_test(test_goal, "https://practice.expandtesting.com/checkboxes")
         await self._verify_run(run_id)
 
-    async def test_et_radio(self):
+    async def test_practice_radio(self):
         test_goal = "Verify that only one radio button can be selected at a time"
         run_id = await run_test(test_goal, "https://practice.expandtesting.com/radio-buttons")
         await self._verify_run(run_id)
 
-    async def test_et_upload(self):
+    async def test_practice_upload(self):
         test_goal = "Verify that a file can be uploaded successfully on the upload page"
         run_id = await run_test(test_goal, "https://practice.expandtesting.com/upload")
         await self._verify_run(run_id)

@@ -929,9 +929,18 @@
 
     .split-pane.before {
       z-index: 1;
-      width: 50%;
+      width: 100%;
       border-right: 2px solid var(--primary);
       box-shadow: 10px 0 30px rgba(0,0,0,0.5);
+      animation: split-sweep 6s ease-in-out infinite;
+    }
+
+    @keyframes split-sweep {
+      0% { width: 100%; }
+      15% { width: 100%; }
+      45% { width: 0%; }
+      70% { width: 0%; }
+      100% { width: 100%; }
     }
 
     .split-pane.after {
@@ -955,8 +964,30 @@
       gap: 0.5rem;
     }
 
-    .pane-label.before { color: var(--text-400); }
-    .pane-label.after { color: var(--emerald-400); }
+    .pane-label.before { 
+      color: var(--text-400); 
+      animation: label-before-fade 6s ease-in-out infinite;
+    }
+    .pane-label.after { 
+      color: var(--emerald-400); 
+      animation: label-after-fade 6s ease-in-out infinite;
+    }
+
+    @keyframes label-before-fade {
+      0% { opacity: 1; }
+      15% { opacity: 1; }
+      45% { opacity: 0; }
+      70% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes label-after-fade {
+      0% { opacity: 0; }
+      15% { opacity: 0; }
+      45% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
 
     .split-divider {
       background: linear-gradient(180deg, transparent, var(--primary), transparent);

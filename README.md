@@ -24,16 +24,19 @@ graph TD
     F -- "No" --> B
     
     subgraph "Intelligence Layer"
-    B[Planner Agent: Gemini 3 Flash Preview]
-    C[Actor Agent: Gemini 3 Flash Preview]
-    E[Validator Agent: Gemini 3 Flash Preview]
+    B[Planner: Gemini 1.5 Flash]
+    C[Actor: Gemini 1.5 Flash]
+    E[Validator: Gemini 1.5 Flash]
+    H[Embeddings: gemini-embedding-001]
+    E -.-> H
     end
 ```
 
 ### Core Components
 - **Planner Agent (Gemini 3 Flash Preview)**: Ingests the high-level goal and visual state to construct a deterministic execution graph.
 - **Actor Agent (Gemini 3 Flash Preview)**: Translates logical steps into a $0-1000$ normalized coordinate grid for pixel-perfect execution.
-- **Validator Agent (Gemini 3 Flash Preview)**: Analyzes the resulting visual state and destination URLs to confirm qualitative intent was met.
+- **Validator Agent (Gemini 1.5 Flash)**: Analyzes the resulting visual state and destination URLs to confirm qualitative intent was met.
+- **Embedding Layer (gemini-embedding-001)**: Powers semantic path verification through high-dimensional vector analysis.
 - **MCP Middleware**: Bridges the AI agents directly to enterprise tools (Jira, Slack, etc.), ensuring autonomous defect reporting.
 
 ---
@@ -43,7 +46,7 @@ graph TD
 - **Computer Use API Implementation**: Native integration for visual-spatial reasoning.
 - **SSIM Polling**: Continuous visual polling that captures successive screenshots to confirm UI stability without arbitrary waits.
 - **Semantic Proximity**: Bypasses the DOM entirely, identifying elements via visual proximity (e.g., linking a label to its adjacent input box).
-- **High-Dimensional Validation**: Flagging routing failures if the **Cosine Similarity** between intent and outcome falls below $0.70$.
+- **High-Dimensional Validation**: Flagging routing failures if the **Cosine Similarity** (via `gemini-embedding-001`) between intent and outcome falls below $0.70$.
 
 ---
 
