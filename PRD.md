@@ -28,7 +28,7 @@ The framework employs a specialized multi-agent orchestration layer to ensure hi
 *   **Semantic Visual Context**: Prioritizes visual labels and spatial proximity over fragile CSS/XPath selectors.
 
 ### Semantic Validation Layer
-*   **High-Dimensional Verification**: Utilizes **`text-embedding-004`** to convert source intent and destination page content into vector embeddings.
+*   **High-Dimensional Verification**: Utilizes **`gemini-embedding-001`** to convert source intent and destination page content into vector embeddings.
 *   **Cosine Similarity Thresholds**: Flags "High-Risk Routing Failures" if the semantic similarity between the expected outcome and actual page content falls below a defined threshold (e.g., < 0.70).
 *   **Multi-Modal Mismatch Detection**: Architected to catch visual/textual discrepancies (e.g., text describes "Red Bag" but image shows "Blue Shoe").
 

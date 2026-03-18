@@ -26,7 +26,7 @@ def _get_client():
 
 async def get_text_embedding(
     text: str,
-    model: str = "text-embedding-004",
+    model: str = "gemini-embedding-001",
 ) -> list[float]:
     """Get embedding vector from Gemini embedding model."""
     client = _get_client()
@@ -44,7 +44,7 @@ async def get_text_embedding(
 async def verify_destination(
     source_intent: str,
     destination_text: str,
-    model: str = "text-embedding-004",
+    model: str = "gemini-embedding-001",
     threshold: float = 0.70,
 ) -> tuple[bool, float]:
     """
