@@ -109,6 +109,13 @@ Visit `http://localhost:8000` to:
 - **Analyze Results**: View high-fidelity screenshot traces and annotated reasoning logs.
 - **Filter History**: Sort and search through historical extraction runs.
 
+### 💻 Command Line Interface
+You can also run isolated test scenarios directly from your terminal.
+
+```bash
+poetry run python src/main.py --url "https://www.mrgnyc.com/" --test "Verify the availability of 1-bedroom apartments"
+```
+
 ### 🧪 Running E2E Tests
 The framework includes a suite of real-world test scenarios to verify its own stability.
 
